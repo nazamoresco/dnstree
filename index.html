@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNS tree</title>
+  <link rel="stylesheet" href="./main.css">
+
+</head>
+
+  <body>
+    <div class="forms">
+      <form onsubmit="return false;" method="post">
+        <label>Create</label>
+        <input type="file" name="file" style="display:none;" id="file" />
+        <p id="filename"></p>
+        <label for="file" class="file"> Upload file </label>
+        <input type="submit" onclick="create()" />
+      </form>
+      <form onsubmit="return false;" method="post">
+        <label>Add Domain</label>
+        <textarea id="url" ></textarea>
+        <input type="submit" onclick="add()" />
+      </form>
+      <form onsubmit="return false;" method="post">
+        <label>Query Domain</label>
+        <input type="text" id="url_query"/>
+        <input type="submit" onclick="query()" />
+      </form>
+    </div>
+    <canvas id="myCanvas"></canvas>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
+
